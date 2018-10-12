@@ -33,40 +33,17 @@ public class QuestionSystem : MonoBehaviour {
         if(answer == current.answer)
         {
             poin += 1;
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex,LoadSceneMode.Single);
         }
         else
         {
-            SceneManager.LoadSceneAsync(0);
-            PlayerPrefs.SetInt("highScore : ", poin);
+          //  PlayerPrefs.SetInt("highScore : ", poin);
+            SceneManager.LoadSceneAsync(0,LoadSceneMode.Single);
+          
+    
         }
-        /*
-        if ( answer)
-        {
-            if (current.answer)
-            {
-                
-            }
-            else
-            {
-                SceneManager.LoadSceneAsync(0);
-            }
-            
-        }
-        else 
-        {
-            if (!current.answer)
-            {
-                poin+=1;
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-            }
-            else
-            {
-                SceneManager.LoadSceneAsync(0);
-                PlayerPrefs.SetInt("highScore", poin);
-            }
-        }
-        */
+    
    
     
     }
