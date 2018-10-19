@@ -38,7 +38,7 @@ public class QuestionSystem : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("highScore : ", poin);
+            PlayerPrefs.SetInt("highScore", poin);
             SceneManager.LoadScene("MainMenu");
         }
     }
